@@ -1,0 +1,304 @@
+/** @format */
+:root {
+  --heading1height: calc(var(--space-24) + var(--font-size-48));
+  --top-padding: calc(var(--base-unit) * 24);
+  --drop-zone-width: 500px;
+  --max-drop-zone-height: 560px;
+  --drop-zone-border-radius: calc(var(--base-unit) * 10);
+
+  --uniform_width: 40%;
+  --uniformLength: 40%;
+}
+
+
+/* Full upload page CSS */
+.upload-page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;  
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+/* Drop zone styling */
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 21px auto;
+}
+
+/* Upload button styling */
+.drop-zone__button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--medium-green);
+  color: var(--text-main);
+  border-radius: var(--drop-zone-border-radius);
+  width: 500px;
+  height: 225px;
+  border: none;
+  font-size: var(--font-size-24);
+  box-shadow: 2px 3px 10px var(--colour-black);
+  margin-bottom: 0;
+}
+
+.drop-zone__button-active {
+  border: 1px solid var(--colour-border-light);
+  background-color: rgba(27, 36, 24, 0.5);
+}
+
+/* Upload box text styles */
+.dragBoxText {
+  display: inline-block;
+  color: var(--text-main);
+  font-size: var(--font-size-24);
+}
+.browseTxt {
+  display: inline-block;
+  color: var(--text-main);
+  font-size: var(--font-size-24);
+}
+.subtext {
+  margin-top: var(--space-8);
+  color: var(--text-main);
+  font-size: var(--font-size-16);
+}
+
+/* Upload button image hover effect */
+.drop-zone__button img {
+  transition: transform 0.3s ease;
+  height: 68px;
+}
+.drop-zone__button:hover img {
+  transform: scale(1.1);
+}
+
+/* File list styling */
+.file-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.file-list-header {
+  width: 100%;
+  margin-top: 32px;
+  background: var(--medium-green);
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 16px;
+  padding-right: 18px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+
+.file-list h3 {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 14px;
+  font-size: var(--font-size-16);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.file-list ul {
+  list-style: none;
+  max-height: 400px;
+  /* width: 850px; */
+  overflow: auto;
+  background: var(--image-list-background-box-secondary);
+  /* background: var(--image-list-background-box); */
+  height: 361px;
+  min-height: calc(100vh - 465px);
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 2px solid #f5f2dc;
+  font-size: var(--font-size-14);
+  color: var(--text-main);
+  padding-left: 16px;
+}
+
+.file-list li:last-child {
+  border-bottom: none;
+}
+
+
+/* Select/Deselect All buttons */
+.file-list-header > button {
+  margin-right: 12px;
+  margin-bottom: 10px;
+  padding: 7px 20px;
+  background: var(--button-container-primary);
+  border-radius: 6px;
+  color: black;
+  font-size: var(--font-size-14);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  border: none;
+  
+}
+
+.file-list-header > button:hover {
+  background: #f6b85a;
+
+}
+
+/* Upload Selected Images button */
+.upload-selected-btn {
+  display: block;
+  margin: 28px auto 0 auto;
+  padding: 13px 36px;
+  background: var(--button-container-primary);
+  color: black;
+  font-size: var(--font-size-16);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.upload-selected-btn:hover {
+  background: #f6b85a;
+}
+
+/* Progress bar styling */
+.progressBarZone {
+  width: var(--uniformLength);
+  height: 30px;
+  background-color: var(--medium-green);
+  border-radius: 25px;
+  box-shadow: 2px 3px 10px var(--colour-black);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#progressBarProgress {
+  height: 30px;
+  width: 0%;
+  background-color: green;
+  border-radius: 25px;
+  transition: width 0.3s;
+}
+
+/* Progress table styling */
+.uploadTable {
+  color: var(--text-colour-light);
+  width: var(--uniform_width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progressLabel {
+  text-align: left;
+  font-size: var(--font-size-14);
+  color: var(--text-main);
+}
+.progressNumber {
+  text-align: right;
+  font-size: var(--font-size-14);
+  color: var(--text-main);
+} 
+
+/* Next page button */
+.next_page_row {
+  text-align: right;
+}
+#next_page_button {
+  border-radius: 25px;
+  background-color: var(--medium-green);
+  border: 2px;
+  height: 50px;
+  width: 30%;
+}
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-height: 960px) {
+  .drop-zone__button img {
+    height: 48px;
+    padding-right: 20px;
+  }
+
+  .dragBoxText {
+    font-size: var(--font-size-16);
+  }
+
+  .subtext {
+    font-size: var(--font-size-14);
+  }
+
+  .drop-zone__button {
+    flex-direction: row;
+    text-align: left;
+    height: 100px;
+  }
+
+  .file-list h3 {
+    font-size: var(--font-size-14);
+  }
+
+  .file-list ul {
+    min-height: calc(100vh - 340px);
+}
+
+}
+
+
+/* @media only screen and (max-height: 735px) {
+  .file-list ul {
+    max-height: 365px;
+  }
+}
+
+
+@media only screen and (max-width: 1325px) {
+  .file-list ul {
+    width: 650px;
+  }
+}
+
+
+@media only screen and (max-width: 1075px) {
+  .file-list ul {
+    width: 500px;
+  }
+} */
+
+.uploadPageStyle {
+  width: 100%;
+}
+
+.file-list-content {
+  width: 100%;
+}
+
+.file-list {
+  width: 100%;
+}

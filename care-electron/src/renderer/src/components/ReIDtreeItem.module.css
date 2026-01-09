@@ -1,0 +1,174 @@
+.treeItemWrapper {
+  display: flex;
+  flex-direction: column;
+}
+/** ReID folder browser container **/
+.treeItem {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: var(--font-size-16);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.treeItemContent {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.treeItemLabel {
+  flex-grow: 10;
+  padding: 0 10px;
+}
+
+.treeItemActions {
+  display: flex;
+  gap: 1px;
+}
+/** Browsed file **/
+.treeItem:hover {
+  background: var(--dark-green);
+  width: calc(100% - 1.25rem);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-main);
+}
+/** Browsed file **/
+.treeItemActive {
+  background: var(--dark-green);
+  color: var(--text-main);
+}
+
+.treeItemIcon {
+  width: 16px;
+}
+
+.treeItemChild {
+  padding-left: 20px;
+}
+
+.treeItemButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.downloadIcon{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  transition: opacity 0.3s ease; /* 0.3s is the duration of the transition */
+}
+
+.renameIcon{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  transition: opacity 0.3s ease; /* 0.3s is the duration of the transition */
+}
+
+.treeItemActionIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.treeItemActionIconHover{
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+/* A independent delete button style */
+.deleteButton {
+  position: relative; /* Ensure the icon is overlapped inside the button */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* The parent element of the delete icon */
+.deleteIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  transition: opacity 0.3s ease; /* 0.3s is the duration of the transition */
+}
+
+.defaultDeleteIcon {
+  opacity: 1; /* 0 is transparent, 1 is opaque */
+}
+
+/* The red icon is hidden by default */
+.hoverDeleteIcon {
+  opacity: 0; 
+}
+
+/* The default icon fades out and the red icon fades in when the mouse hovers */
+.treeItemButton:hover .treeItemActionIcon {
+  opacity: 0;
+}
+
+.treeItemButton:hover .treeItemActionIconHover {
+  opacity: 1;
+}
+
+/* The default icon fades out and the red icon fades in when the mouse hovers */
+.downloadIcon:hover .defaultDeleteIcon {
+  opacity: 0;
+}
+
+.deleteButton:hover .hoverDeleteIcon {
+  opacity: 1;
+}
+
+.rename-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rename-input {
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: var(--colour-secondary-dark);
+  border: solid 1px var(--colour-secondary-dark);
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.rename-submit-button {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.uploads__list__item__fileinfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.uploads__list__item__fileinfo .rename-button {
+  padding-left: 16px;
+  padding-right: 16px;
+  background: var(--colour-secondary-light);
+  color: var(--text-colour-dark);
+}
+

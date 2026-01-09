@@ -1,0 +1,294 @@
+
+/* 
+    Based on W3 schools tutorial 
+    https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+ */
+
+ /* list checkbox */
+/* Customize the label (the container) */
+.checkbox_container_list {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container_list input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_list {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  /* background-color: var(--light-green); */
+  background-color: var(--image-list-checkbox);
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+/* On mouse-over, add a colored background color */
+.checkbox_container_list:hover input ~ .checkmark_list {
+  /* background-color: #ccc; */
+  background-color: var(--dark-green);
+}
+
+/* When the checkbox is checked, add a colored background */
+.checkbox_container_list input:checked ~ .checkmark_list {
+  /* background-color: #2196F3; */
+  background-color: var(--dark-green);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_list:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container_list input:checked ~ .checkmark_list:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container_list .checkmark_list:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  /* border: solid white; */
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+ /* preview checkbox */
+/* Customize the label (the container) */
+.checkbox_container_preview {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+}
+/* Hide the browser's default checkbox */
+.checkbox_container_preview input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark_preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  /* background-color: #eee; */
+  border-radius: 10px;
+  background-color: var(--image-list-checkbox);
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--light-green);;
+}
+/* On mouse-over, add a colored background color */
+.checkbox_container_preview:hover input ~ .checkmark_preview {
+  /* background-color: #ccc; */
+  background-color: var(--dark-green);
+
+}
+/* When the checkbox is checked, add a colored background */
+.checkbox_container_preview input:checked ~ .checkmark_preview {
+  /* background-color: #2196F3; */
+  background-color: var(--dark-green);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_preview:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.checkbox_container_preview input:checked ~ .checkmark_preview:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.checkbox_container_preview .checkmark_preview:after {
+  left: 12px;
+  top: 2px;
+  width: 10px;
+  height: 22px;
+  /* border: solid white; */
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+ /* toolbar checkbox */
+/* Customize the label (the container) */
+.checkbox_container_toolbar {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  text-wrap: nowrap;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container_toolbar input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  /* background-color: #eee; */
+  border-radius: 20px;
+  background-color: var(--light-green);
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+/* On mouse-over, add a colored background color */
+.checkbox_container_toolbar:hover input ~ .checkmark_toolbar {
+  /* background-color: #ccc; */
+  background-color: var(--dark-green);
+}
+
+/* When the checkbox is checked, add a colored background */
+.checkbox_container_toolbar input:checked ~ .checkmark_toolbar {
+  /* background-color: #2196F3; */
+  background-color: var(--dark-green);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_toolbar:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container_toolbar input:checked ~ .checkmark_toolbar:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container_toolbar .checkmark_toolbar:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  /* border: solid white; */
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+ /* upload_list checkbox */
+/* Customize the label (the container) */
+.checkbox_container_upload_list {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;  
+  margin-right: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container_upload_list input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_upload_list {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  /* background-color: #eee; */
+  border-radius: 5px;
+  background-color: var(--light-green);
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+}
+
+/* On mouse-over, add a colored background color */
+.checkbox_container_upload_list:hover input ~ .checkmark_upload_list {
+  /* background-color: #ccc; */
+  background-color: var(--dark-green);
+}
+
+/* When the checkbox is checked, add a colored background */
+.checkbox_container_upload_list input:checked ~ .checkmark_upload_list {
+  /* background-color: #2196F3; */
+  background-color: var(--dark-green);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_upload_list:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container_upload_list input:checked ~ .checkmark_upload_list:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container_upload_list .checkmark_upload_list:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  /* border: solid white; */
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

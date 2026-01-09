@@ -1,0 +1,78 @@
+#LabelDropdown {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    column-gap: 8px;
+}
+
+#LabelDropdown button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.conf-button{
+  background-color: var(--medium-green);
+    border-radius: 10px;
+    border: none;
+}
+
+.conf-slider {
+  position: relative;
+  width: 220px;
+  height: 24px;
+}
+
+.conf-label {
+  color: var(--text-main);
+  font-size: var(--font-size-14);
+}
+
+.conf-slider::before {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  transform: translateY(-50%);
+  height: 8px;
+  background: #ddd5b6;
+  border-radius: 999px;
+}
+
+.conf-range {
+  -webkit-appearance: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: transparent;
+  margin: 0;
+  pointer-events: none;
+}
+
+.conf-range::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.conf-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #b5a887;
+  border: 2px solid #544c3d;
+  position: relative;
+  z-index: 2;
+}
+
+.conf-track {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  background: #a3926f;
+  border-radius: 999px;
+  z-index: 1;
+  pointer-events: none;
+}

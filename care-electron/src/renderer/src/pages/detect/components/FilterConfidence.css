@@ -1,0 +1,20 @@
+.confidence__filter-dropdown {
+    padding: 10px;
+}
+
+.confidence__form {
+    display: flex;
+    column-gap: 8px;
+}
+
+.confidence__form input {
+    width: 100px;
+}
+
+.confidence__submit {
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
+}
